@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>{% block title %}This title should be replaced...{% endblock title %}</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="dashboard">Dashboard</a></li>
+            <li><a href="bye">Log out</a></li>
+            {% else %}
+            <li><a href="login">Log in</a></li>
+            <li><a href="tour">Tour</a></li>
+            <li><a href="join">Join</a></li>
+            {% endif %}
+        </ul>
+    </header>
+    
+    {% block content %}This content should be replaced...{% endblock content %}
+
+    <footer>
+        <p>I'm the footer! These static page links to come:</p>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>About</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Help</li>
+        </ul>
+    </footer>
+</body>
+</html>
