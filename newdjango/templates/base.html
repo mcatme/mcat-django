@@ -10,12 +10,12 @@
         <ul>
             <li><a href="/">Home</a></li>
             {% if user.is_authenticated %}
-            <li><a href="dashboard">Dashboard</a></li>
-            <li><a href="bye">Log out</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/bye">Log out</a></li>
             {% else %}
-            <li><a href="login">Log in</a></li>
-            <li><a href="tour">Tour</a></li>
-            <li><a href="join">Join</a></li>
+            <li><a href="/login">Log in</a></li>
+            <li><a href="/tour">Tour</a></li>
+            <li><a href="/join">Join</a></li>
             {% endif %}
         </ul>
     </header>
