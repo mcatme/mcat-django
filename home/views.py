@@ -29,7 +29,8 @@ def hello(request):
     if user is not None:
         if user.is_active:
             login(request, user)
-    return render(request, 'dashboard.html')
+    users = User.objects.all()
+    return render(request, 'dashboard.html', { 'users': users })
 
 def about(request):
     return render(request, 'about.html', )
