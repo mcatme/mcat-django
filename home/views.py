@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth import logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
 def home(request):
@@ -15,9 +15,6 @@ def gone(request):
     u.delete()
     return render(request, 'gone.html')
 
-def login(request):
-    return render(request, 'login.html', )
-
 def tour(request):
     return render(request, 'tour.html', )
 
@@ -25,7 +22,13 @@ def join(request):
     return render(request, 'join.html', )
 
 def hello(request):
-    user = User.objects.create_user(request.POST.get('username'), '', request.POST.get('password'))
+    username = request.POST['username']
+    password = request.POST['password']
+    user = User.objects.create_user(username, '', password)
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        if user.is_active:
+            login(request, user)
     return render(request, 'dashboard.html')
 
 def about(request):
