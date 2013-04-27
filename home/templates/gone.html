@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Gone{% endblock title %}
+
+{% block content %}
+    {% if not user.is_authenticated %}    
+        <p>Seriously? Didn't think you'd actually do it..</p>
+    {% endif %}
+{% endblock content %}
