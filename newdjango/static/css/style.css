@@ -1,4 +1,12 @@
+/********************************************************************
+NOTES 
 
+1) name your div ids starting with [page name]-
+2) Separate all pages by a comment with a title with the name of the 
+   page that the styles are for
+
+
+********************************************************************/
 
 body {
 	padding-bottom: 40px;
@@ -29,3 +37,27 @@ body {
 	background-color:gray;
 	height:100px;
 } 
+
+#home-header-login {
+	text-align: center;
+	vertical-align: bottom;
+	height:98px;
+	border:solid 1px;
+}
+
+/************** Styles for login page ***************/
+
+#login-form {
+	max-width:300px;
+	padding: 19px 29px 29px;
+	margin: auto;
+	border: solid 1px #e5e5e5;	
+	background-color: white;
+}
+
+#login-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:100px;
+	text-align: center;
+}
