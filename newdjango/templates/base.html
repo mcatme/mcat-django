@@ -9,41 +9,53 @@
 </head>
 
 <body>
+	    
+<!--************** Nav Buttons at top of the page ******************-->
+
     <header>
+		{% if user.is_authenticated %}
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
                     <li><a href="/">Home</a></li>
-                    {% if user.is_authenticated %}
                     <li><a href="/dashboard">Dashboard</a></li>
                     <li><a href="/bye">Log out</a></li>
-                    {% else %}
+<!--
                     <li><a href="/login">Log in</a></li>
                     <li><a href="/tour">Tour</a></li>
                     <li><a href="/join">Join</a></li>
-                    {% endif %}
+-->
                 </ul>
             </div>
         </div>
+		{% endif %}
     </header>
-    
-    <div class="hero-unit">
-        {% block content %}This content should be replaced...{% endblock content %}
-    </div>
-    
 
-    <footer>
-        <p>I'm the footer! These static page links to come:</p>
-        <ul class="nav nav-pills nav-stacked">
-            <li><a href="/">Home</a></li>
-            <li>About</li>
-            <li>FAQ</li>
-            <li>Contact</li>
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>Help</li>
-        </ul>
-    </footer>
+
+<!--******************* Body Stuffz *******************************-->
+
+{% block content %}
+    Herein Lies the body content
+{% endblock content %}
+
+<!--***************** Stuff for the footer ***********************-->
+		<footer>
+		<p>I'm the footer! These static page links to come:</p>
+		<ul class="nav nav-pills nav-stacked">
+			<li><a href="/">Home</a></li>
+			<li>About</li>
+			<li>FAQ</li>
+			<li>Contact</li>
+			<li>Privacy</li>
+			<li>Terms</li>
+			<li>Help</li>
+		</ul>
+		</footer>
+
+    <!-- end body container -->
+    </div>
+<!-- ***************** Javascript stuffz **************************-->
+
     <script type="text/javascript" src="{% static "bootstrap.js" %}"></script>
 </body>
 </html>
