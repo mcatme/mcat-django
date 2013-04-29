@@ -8,20 +8,30 @@ NOTES
 
 ********************************************************************/
 
+/************ Styles for Base template ***********/
+
 body {
 	padding-bottom: 40px;
 	padding-top:0px;
 	background-color:#F0F8FF;
 }
 
-/************ Styles for Base template ***********/
+footer {
+	background-color: white;
+}
+
+#base-footer-content {
+	padding-top:30px;	
+
+}
+/************* Styles for home page **************/
+
 
 #home-body-wrapper {
 	/* border:solid 1px; */
 	margin-top:75px;
 	margin-bottom:75px;
 }
-/************* Styles for home page **************/
 
 #home-tour {
 	background-color:#eeeeee;
@@ -46,6 +56,12 @@ body {
 }
 
 /************** Styles for login page ***************/
+
+#login-error {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 #login-form {
 	max-width:300px;
