@@ -21,7 +21,8 @@ footer {
 }
 
 #base-footer-content {
-	padding-top:30px;	
+	padding-top:30px;
+	text-align: center;
 
 }
 /************* Styles for home page **************/
