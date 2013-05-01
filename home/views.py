@@ -1,6 +1,8 @@
+from home.models import SignupForm
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.http import HttpResponse, HttpResponseRedirect
 
 def home(request):
     return render(request, 'home.html', )
@@ -49,4 +51,23 @@ def terms(request):
 
 def help(request):
     return render(request, 'help.html', )
+
+def success(request):
+	return render(request, 'sucess.html', )
+
+def signup_form(request):
+	if request.method == 'POST':
+		form = SignupForm(request.POST)
+		if form.is_valid():
+			username = request.POST['username']
+			email = request.POST['email']
+			password = request.POST['password']
+			new_user = User.objects.create_user(username, email, password)	
+			new_user.save()
+			return HttpResponseRedirect('/success/')
+	else:
+		form = SignupForm()
+	return render(request, 'home.html', { 'signup_form' : form })
+
+
 

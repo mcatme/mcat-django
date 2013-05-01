@@ -22,6 +22,7 @@ footer {
 
 #base-footer-content {
 	padding-top:30px;
+	padding-bottom:50px;
 	text-align: center;
 
 }
@@ -75,6 +76,7 @@ footer {
 #login-wrapper {
 	margin-left: auto;
 	margin-right: auto;
+	height: 700px;
 	padding-top:100px;
 	text-align: center;
 }

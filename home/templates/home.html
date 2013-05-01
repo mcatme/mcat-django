@@ -29,7 +29,11 @@
 		</div>
 		<div id="home-sign_up" class="span6">
 			<h3>Sign Up</h3>
-			<p>This is the place where my homies can sign demselves up fo' dis g site. Yeahbuddy.</p>
+			<p>This is the place where my homies can sign demselves up fo' dis g site. Yeahbuddy.</p>	
+			<form action="" method="post">{% csrf_token %}
+				<p>{{ signup_form.as_p }}</p>
+				<input type="submit" value="Submit" />
+			</form>
 		</div>
 	</div>
 </div>
