@@ -1,0 +1,101 @@
+/********************************************************************
+NOTES 
+
+1) name your div ids starting with [page name]-
+2) Separate all pages by a comment with a title with the name of the 
+   page that the styles are for
+
+
+********************************************************************/
+
+/************ Styles for Base template ***********/
+
+body {
+	padding-bottom: 40px;
+	padding-top:0px;
+	background-color:#cae7ff;
+}
+
+footer {
+	background-color: white;
+}
+
+#base-footer-content {
+	padding-top:30px;
+	padding-bottom:50px;
+	text-align: center;
+
+}
+/************* Styles for home page **************/
+
+
+#home-body-wrapper {
+	/* border:solid 1px; */
+	margin-top:75px;
+	margin-bottom:75px;
+}
+
+#home-tour {
+	background-color:#eeeeee;
+	height:500px;
+	text-align:center;
+}
+
+#home-sign_up {
+	background-color:#eeeeee;
+	height:500px;
+	text-align:center;
+}
+
+#home-header-logo {
+	height:98px;
+	text-align:center;
+}
+
+#home-header-wrapper {
+	background-color:gray;
+	height:100px;
+}
+
+#home-header-wrapper a:link {color:black}
+#home-header-wrapper a:visited {color:black}
+
+#home-header-login {
+	position: relative;
+	top:20px;
+}
+
+#home-signup-username {
+	
+}
+
+#home-signup-email {
+
+}
+
+#home-signup-passwod {
+
+}
+/************** Styles for login page ***************/
+
+#login-error {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#login-form {
+	max-width:300px;
+	padding: 19px 29px 29px;
+	margin: auto;
+	border: solid 1px #e5e5e5;	
+	background-color: white;
+}
+
+#login-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	height: 700px;
+	padding-top:100px;
+	text-align: center;
+}

@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>{% block title %}This title should be replaced...{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+</head>
+
+<body>
+	    
+<!--************** Nav Buttons at top of the page ******************-->
+
+    <header>
+		{% if user.is_authenticated %}
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/bye">Log out</a></li>
+<!--
+                    <li><a href="/login">Log in</a></li>
+                    <li><a href="/tour">Tour</a></li>
+                    <li><a href="/join">Join</a></li>
+-->
+                </ul>
+            </div>
+        </div>
+		{% endif %}
+    </header>
+
+
+<!--******************* Header Stuffz ****************************-->
+
+<div id="home-header-wrapper" class="container-fluid">
+	<div class="row-fluid">
+		<div id="home-header-logo" class="span8">
+			<h3>SUP BRO (dis be da heada')</h3>
+		</div>
+		<div id="home-header-login" class="span2">
+			<p><a href="/login">Login Friend!</a></p>
+		</div>
+	</div>
+</div>
+
+<!--******************* Body Stuffz *******************************-->
+
+
+{% block content %}
+    Herein Lies the body content
+{% endblock content %}
+
+<!--***************** Stuff for the footer ***********************-->
+	
+
+	<footer class="well">
+		<div id="base-footer-content" class="container">
+			<p><small>
+				<a href="/">Home</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+				<a href="/about">About</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+				<a href="/faq">FAQ</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+				<a href="/contact">Contact</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+				<a href="/privacy">Privacy</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+				<a href="/terms">Terms</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp
+				<a href="/help">Help</a>&nbsp&nbsp&nbsp
+			</small></p>
+		</div>
+	</footer>
+
+<!-- ***************** Javascript stuffz **************************-->
+
+    <script type="text/javascript" src="{% static "bootstrap.js" %}"></script>
+</body>
+</html>
