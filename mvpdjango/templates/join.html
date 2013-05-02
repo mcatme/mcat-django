@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Join{% endblock title %}
+
+{% block content %}
+<p>Oh! Yes, Join us!</p>
+
+<form method="post" action="hello">
+{% csrf_token %}
+<table>
+<tr>
+    <td>Username</td>
+    <td><input type="text" name="username" /></td>
+</tr>
+<tr>
+    <td>Password</td>
+    <td><input type="password" name="password" /></td>
+</tr>
+</table>
+
+<input type="submit" value="join" />
+</form>
+
+{% endblock content %}

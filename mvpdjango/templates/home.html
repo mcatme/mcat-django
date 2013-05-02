@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<body>
+
+
+<!-- Body Content
+============================================== -->
+
+<div id="home-body-wrapper" class="container">
+	<div id="home-body-row" class="row-fluid">
+		<div id="home-tour" class="well span6">
+			<h3>Welcome to the site!</h3>
+			<p>This is a a test paragraph... and it's going to go on and on about something interesting, which I don't really have timetime to talktalk about nownow. Right.</p>
+			<p>And this is just one more test paragraph</p>
+		</div>
+		<div id="home-sign_up" class="well span6">
+			<h3>Sign Up</h3>
+			<p>This is the place where my homies can sign demselves up fo' dis g site. Yeahbuddy.</p>	
+			<form action="/" method="post">{% csrf_token %}
+				<div id="home-signup-username">
+					<p>{{ signup_form.username }}</p>
+				</div>
+				<div id="home-signup-email">
+					<p>{{ signup_form.email }}</p>
+				</div>
+				<div id="home-signup-password">
+					<p>{{ signup_form.password }} </p>
+				</div>
+				<input type="submit" value="Submit" />
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+
+{% endblock content %}
