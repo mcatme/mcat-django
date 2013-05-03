@@ -7,15 +7,15 @@ from django.http import HttpResponse, HttpResponseRedirect
 def home(request):
     return render(request, 'home.html', )
 
-def bye(request):
+def seeyousoon(request):
     logout(request)
-    return render(request, 'bye.html')
+    return render(request, 'seeyousoon.html')
 
-def gone(request):
+def goodbye(request):
     u = request.user
     logout(request)
     u.delete()
-    return render(request, 'gone.html')
+    return render(request, 'goodbye.html')
 
 def tour(request):
     return render(request, 'tour.html', )
@@ -23,7 +23,7 @@ def tour(request):
 def join(request):
     return render(request, 'join.html', )
 
-def login(request):
+def login_user(request):
 	if request.method == 'POST':
 		form = LoginForm(request.POST)
 		if form.is_valid():
@@ -59,7 +59,7 @@ def help(request):
     return render(request, 'help.html', )
 
 def success(request):
-	return render(request, 'success.html', )
+    return render(request, 'success.html', )
 
 def signup_form(request):
 	if request.method == 'POST':
@@ -74,6 +74,3 @@ def signup_form(request):
 	else:
 		form = SignupForm()
 	return render(request, 'home.html', { 'signup_form' : form })
-
-
-
